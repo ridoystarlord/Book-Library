@@ -1,5 +1,8 @@
+// hide error and spinner
 document.getElementById("show-error").style.display = "none";
 document.getElementById("loading-spinner").style.display = "none";
+
+// Search Button Click handle
 const bookContainer = document.getElementById("book-container");
 const searchBookByName = () => {
   bookContainer.textContent = "";
@@ -8,6 +11,7 @@ const searchBookByName = () => {
   const bookInputBox = document.getElementById("book-input-box");
   const bookName = bookInputBox.value;
   bookInputBox.value = "";
+  // Empty Search Error handle
   if (bookName === "") {
     document.getElementById("loading-spinner").style.display = "none";
     document.getElementById("show-error").style.display = "block";
@@ -24,6 +28,7 @@ const searchBookByName = () => {
     .catch((error) => displayError());
 };
 
+// handle Server Error
 const displayError = () => {
   document.getElementById("loading-spinner").style.display = "none";
   document.getElementById("show-error").style.display = "block";
@@ -32,6 +37,7 @@ const displayError = () => {
     "Something Went Wrong Try Again Later";
 };
 
+// handle no results error
 const checkBookResult = (data) => {
   if (data.numFound === 0) {
     document.getElementById("show-error").style.display = "block";
@@ -48,6 +54,7 @@ const checkBookResult = (data) => {
   }
 };
 
+//display books in UI
 const displayBooks = (bookList) => {
   bookList.forEach((book) => {
     const div = document.createElement("div");
