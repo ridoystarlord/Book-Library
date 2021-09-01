@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Library</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-light">
+    <!-- header start -->
+    <header>
+      <h1 class="text-center">Search Your Favourite</h1>
+    </header>
+    <!-- header END -->
+    <!-- Main start -->
+    <main>
+      <section class="container">
+        <div class="input-group my-3 w-50 mx-auto">
+          <input
+            id="book-input-box"
+            type="text"
+            class="form-control"
+            placeholder="Enter a book name"
+            aria-label="Enter a book name"
+            aria-describedby="search-book-btn"
+          />
+          <button
+            onclick="searchBookByName()"
+            class="btn btn-outline-secondary"
+            type="button"
+            id="search-book-btn"
+          >
+            Search
+          </button>
+        </div>
+        <h5 id="show-error" class="text-center mb-3"></h5>
+        <div class="d-flex justify-content-center">
+          <div id="loading-spinner" class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </section>
+      <section class="container">
+        <div id="book-container" class="row row-cols-1 row-cols-md-3 g-4"></div>
+      </section>
+    </main>
+    <!-- main END -->
+    <!-- Footer start -->
+    <footer></footer>
+    <!-- footer END -->
+    <!-- Bootstrap CSS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
